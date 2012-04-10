@@ -18,10 +18,7 @@
 			
 		  	var highest = 0;
 			$children.each(function(){
-				var h = $(this).height();
-				if (h > highest) {
-					highest = h
-				}
+				highest = Math.max($(this).height(), highest);
 			}).height(highest);
 
 		});
